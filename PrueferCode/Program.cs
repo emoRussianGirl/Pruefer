@@ -159,7 +159,7 @@ public class PrueferEncoder
     private int GetIndexOfMin(IEnumerable<(int x1, int x2)> graph)
     {
         var min = graph
-            .Where(e => !graph.Any(edge => edge.x1 == e.x2)) //Берем все висящие ребра
+            .Where(e => !graph.Any(edge => edge.x1 == e.x2)) //Берем все ребра, которые на концах графа
             .MinBy(e => e.x2); //Находим минимальную вершину среди них
 
         //возращаем минимальную вершину
